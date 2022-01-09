@@ -1,9 +1,9 @@
 class Kasa < Formula
   desc 'CLI for esa.'
   homepage 'https://github.com/winebarrel/kasa'
-  version '0.1.5'
+  version '0.1.6'
   url "https://github.com/winebarrel/kasa/releases/download/v#{version}/kasa_#{version}_darwin_amd64.tar.gz"
-  sha256 '009c3690195011505137ff37cd578581a6cb542fce3f5f28755e134b485553cd'
+  sha256 '1afdb5d5cebbf197ade510f6c068f3c51b333fd3cb3b718952961d876aed5b57'
   license 'MIT'
 
   def install
