@@ -9,17 +9,17 @@ class Kasa < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.4.8/kasa_0.4.8_darwin_arm64.tar.gz"
-      sha256 "3c0fcc6aa00acebe0acc5a147b352c3438b862db1745d1d7747e0fd1acde797e"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.4.8/kasa_0.4.8_darwin_amd64.tar.gz"
+      sha256 "62f203099ad2423690c1bb64770d52fc2fc8401a8179097d626b80ff3fb4232c"
 
       def install
         bin.install 'kasa'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.4.8/kasa_0.4.8_darwin_amd64.tar.gz"
-      sha256 "8492da3940c9698366955850907ea20ea02e6ec3592dc2ae4c4d9352406ec599"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.4.8/kasa_0.4.8_darwin_arm64.tar.gz"
+      sha256 "88577110b5056a51cf86443cccd7bc4ace18760dcfd91cfc3449d91d92919a6a"
 
       def install
         bin.install 'kasa'
@@ -30,7 +30,7 @@ class Kasa < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/winebarrel/kasa/releases/download/v0.4.8/kasa_0.4.8_linux_arm64.tar.gz"
-      sha256 "993e678af4e82b61e0f17b1ce811fa7dd3047322f4fa53ebea9640fb2200b949"
+      sha256 "d1313f68ffb95903b8c5773183367d2904cf93ae183be6de98cfdab1003cb0bd"
 
       def install
         bin.install 'kasa'
@@ -38,7 +38,7 @@ class Kasa < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/kasa/releases/download/v0.4.8/kasa_0.4.8_linux_amd64.tar.gz"
-      sha256 "ef6c5bc606fa784e4e5b676fc60043087ce8e49cbf0456ef9eac5add5b463955"
+      sha256 "adab7161b0a85aba2f43a507c228e0756306ecc4fd453c80695f19df14eed72a"
 
       def install
         bin.install 'kasa'
