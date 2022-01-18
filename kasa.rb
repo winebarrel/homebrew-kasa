@@ -5,21 +5,21 @@
 class Kasa < Formula
   desc "CLI for esa."
   homepage "https://github.com/winebarrel/kasa"
-  version "0.9.6"
+  version "0.9.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.6/kasa_0.9.6_darwin_arm64.tar.gz"
-      sha256 "dd7eefbb0ec5a5d8c7119bf9c8d7c6594f70f161888aa488d07bff2cff99a0ce"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_darwin_amd64.tar.gz"
+      sha256 "1d8d2f49083420f9653f528968736ef1e943d2919e648f68f27531df369c37af"
 
       def install
         bin.install 'kasa'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.6/kasa_0.9.6_darwin_amd64.tar.gz"
-      sha256 "142a2bd55e2a75bb77a039290fa3fb233685d8cbb239b8cd7802183059cebebd"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_darwin_arm64.tar.gz"
+      sha256 "09a3e9970b845c6dc7023c3e131d0f4ccec356def85118c5aece9fc5cb7f4914"
 
       def install
         bin.install 'kasa'
@@ -28,17 +28,17 @@ class Kasa < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.6/kasa_0.9.6_linux_amd64.tar.gz"
-      sha256 "b948daf0f17438f5c3abffb09f1a2b15ad67249a3ec193d30660f332858e4f98"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_linux_arm64.tar.gz"
+      sha256 "87aebbf025d5a1665dd66eef541eeacab9da8c3d479b61f513e0bd2fcf2a24dc"
 
       def install
         bin.install 'kasa'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.6/kasa_0.9.6_linux_arm64.tar.gz"
-      sha256 "6662de3e03d0f4e92df989ec41069ed1bd84f0d130e52b2cb7ef51952f46bbeb"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_linux_amd64.tar.gz"
+      sha256 "c0ff80cc385933c502e1ca93de952778b9d435aee28d9eecc76837b6ad1fa849"
 
       def install
         bin.install 'kasa'
