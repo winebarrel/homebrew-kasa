@@ -5,21 +5,21 @@
 class Kasa < Formula
   desc "CLI for esa."
   homepage "https://github.com/winebarrel/kasa"
-  version "0.9.7"
+  version "0.9.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_darwin_amd64.tar.gz"
-      sha256 "1d8d2f49083420f9653f528968736ef1e943d2919e648f68f27531df369c37af"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.8/kasa_0.9.8_darwin_arm64.tar.gz"
+      sha256 "728ab5e7ba391682e5fd822167123716b13a668e5ad4b3aa3c79852794965725"
 
       def install
         bin.install 'kasa'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_darwin_arm64.tar.gz"
-      sha256 "09a3e9970b845c6dc7023c3e131d0f4ccec356def85118c5aece9fc5cb7f4914"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.8/kasa_0.9.8_darwin_amd64.tar.gz"
+      sha256 "a04ec414f07a32a4671fd36c9548d2ee594eab56447678c789180bb543b1ae4d"
 
       def install
         bin.install 'kasa'
@@ -29,16 +29,16 @@ class Kasa < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_linux_arm64.tar.gz"
-      sha256 "87aebbf025d5a1665dd66eef541eeacab9da8c3d479b61f513e0bd2fcf2a24dc"
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.8/kasa_0.9.8_linux_arm64.tar.gz"
+      sha256 "a4232c6067e489592f48c09e0edf28a4dc147c666082fce13908b3038733d537"
 
       def install
         bin.install 'kasa'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/kasa/releases/download/v0.9.7/kasa_0.9.7_linux_amd64.tar.gz"
-      sha256 "c0ff80cc385933c502e1ca93de952778b9d435aee28d9eecc76837b6ad1fa849"
+      url "https://github.com/winebarrel/kasa/releases/download/v0.9.8/kasa_0.9.8_linux_amd64.tar.gz"
+      sha256 "5387644ffa47ea3a20e6c71ba64122a06abeea8eb5514a5ea7b95b3481bf7c3c"
 
       def install
         bin.install 'kasa'
