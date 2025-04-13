@@ -11,7 +11,7 @@ class Kasa < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/kasa/releases/download/v1.5.1/kasa_1.5.1_darwin_amd64.tar.gz"
-      sha256 "608f9c2075b2b55f5912dbf22c37f8cc8fc78b3fa76a52c872d0cd48d0883fbe"
+      sha256 "cd0e6812d07e54a309bf0f66b74fb5a54d32d3e62b645edfe7f90c0848e7b77c"
 
       def install
         bin.install 'kasa'
@@ -19,7 +19,7 @@ class Kasa < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/winebarrel/kasa/releases/download/v1.5.1/kasa_1.5.1_darwin_arm64.tar.gz"
-      sha256 "3c40d1f05bfc0d9338a0ab447bbddad7f922781c5a284d7d96446f7c79a8397e"
+      sha256 "07ae41391b2db629e5ee666cd05f7030ec3b4d2982151501459dd8ee79d43c3d"
 
       def install
         bin.install 'kasa'
@@ -31,7 +31,7 @@ class Kasa < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/winebarrel/kasa/releases/download/v1.5.1/kasa_1.5.1_linux_amd64.tar.gz"
-        sha256 "8436d4880810dbf2d6a0680d2a4595979dcc29269b9c998aa0f0602c9d821fe3"
+        sha256 "e52d5141907edf447a1a4c0a2e796db42579878ed75b5c645c522a2852dd1755"
 
         def install
           bin.install 'kasa'
@@ -41,7 +41,7 @@ class Kasa < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/winebarrel/kasa/releases/download/v1.5.1/kasa_1.5.1_linux_arm64.tar.gz"
-        sha256 "cc5d2d169866823aaab7eb907fb3ee6f727ee251fd8bd18939e81aa2a711559d"
+        sha256 "081221bb35634786e215d1b92d35e2eb535e31a65c4f9967274f47d5919be319"
 
         def install
           bin.install 'kasa'
